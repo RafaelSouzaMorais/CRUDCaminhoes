@@ -5,8 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer("Data Source =RAFAEL-PC\\SQLEXPRESS; Initial Catalog =CRUD_caminhoes;  User ID=sa; Password=1234; Integrated Security = True; Timeout=15; Encrypt=false; TrustServerCertificate=false"));
+IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
