@@ -37,7 +37,5 @@ namespace CRUDCaminhoes.Models
         [Display(Name = "Nome")]
         public string Nome { get; set; }
 
-
-
     }
 }
