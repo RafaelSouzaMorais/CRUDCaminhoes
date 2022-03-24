@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUDCaminhoes.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220324144340_Inicial-criacao")]
+    [Migration("20220324185901_Inicial-criacao")]
     partial class Inicialcriacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,12 @@ namespace CRUDCaminhoes.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Modelo");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
+                        .HasColumnName("Nome");
 
                     b.HasKey("IdCaminhao");
 

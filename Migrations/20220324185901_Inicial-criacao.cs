@@ -16,7 +16,8 @@ namespace CRUDCaminhoes.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AnoFabricacao = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: false),
-                    AnoModelo = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: false)
+                    AnoModelo = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
                 },
                 constraints: table =>
                 {

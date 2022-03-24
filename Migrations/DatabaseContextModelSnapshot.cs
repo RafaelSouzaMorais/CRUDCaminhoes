@@ -47,6 +47,12 @@ namespace CRUDCaminhoes.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Modelo");
 
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
+                        .HasColumnName("Nome");
+
                     b.HasKey("IdCaminhao");
 
                     b.ToTable("Caminhoes");

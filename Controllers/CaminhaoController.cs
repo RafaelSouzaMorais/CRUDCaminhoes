@@ -59,7 +59,7 @@ namespace CRUDCaminhoes.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdCaminhao,Modelo,AnoFabricacao,AnoModelo")] Caminhao caminhao)
+        public async Task<IActionResult> Create([Bind("IdCaminhao,Nome,Modelo,AnoFabricacao,AnoModelo")] Caminhao caminhao)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace CRUDCaminhoes.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdCaminhao,Modelo,AnoFabricacao,AnoModelo")] Caminhao caminhao)
+        public async Task<IActionResult> Edit(int id, [Bind("IdCaminhao,Nome,Modelo,AnoFabricacao,AnoModelo")] Caminhao caminhao)
         {
             if (id != caminhao.IdCaminhao)
             {

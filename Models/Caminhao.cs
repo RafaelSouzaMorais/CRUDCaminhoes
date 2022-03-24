@@ -31,6 +31,12 @@ namespace CRUDCaminhoes.Models
         [Display(Name = "Ano do Modelo")]
         public string AnoModelo { get; set; }
 
+        [Column("Nome")]
+        [Required]
+        [StringLength(25)]
+        [Display(Name = "Nome")]
+        public string Nome { get; set; }
+
 
 
     }
