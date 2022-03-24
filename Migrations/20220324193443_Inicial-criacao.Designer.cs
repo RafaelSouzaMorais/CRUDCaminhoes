@@ -11,11 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUDCaminhoes.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-<<<<<<<< HEAD:Migrations/20220324185901_Inicial-criacao.Designer.cs
-    [Migration("20220324185901_Inicial-criacao")]
-========
-    [Migration("20220324192109_Inicial-criacao")]
->>>>>>>> 27aa26e (Adicionando o campo Nome para o caminhão):Migrations/20220324192109_Inicial-criacao.Designer.cs
+    [Migration("20220324193443_Inicial-criacao")]
     partial class Inicialcriacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
